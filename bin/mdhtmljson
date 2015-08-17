@@ -6,24 +6,42 @@ var marked = require('marked');
 var argv = require('yargs').argv;
 
 
-function scrapeReadme(url, output) {
-  request(url, function (error, response, html) {
-    if (!error && response.statusCode == 200) {
-      var parsedResult = {
-      	html: marked(response.body)
-      };
+function main() {
+	function scrapeReadme(url, output) {
+	  request(url, function (error, response, html) {
+	    if (!error && response.statusCode == 200) {
+	      var parsedResult = {
+	      	html: marked(response.body)
+	      };
 
-      fs.writeFile(output + '.json', JSON.stringify(parsedResult, null, 4), function(error){
-				if (error) { return console.log('Ooops, we have an error – Are you sure the output directory exists? ' + error); }
-	      console.log('Your file is ready – ' + output + '.json');
-      });
-    }
+	      fs.writeFile(output + '.json', JSON.stringify(parsedResult, null, 4), function(error){
+					if (error) { return console.log('Ooops, we have an error – Are you sure the output directory exists? ' + error); }
+		      console.log('Your file is ready – ' + output + '.json');
+	      });
+	    }
+	  });
+	}
+
+	if (argv.url) {
+		argv.output = argv.output || './mdhtml';
+		scrapeReadme(argv.url, argv.output);
+	} else {
+		console.log('You must pass a url via the --url flag');
+	}
+}
+
+
+/**
+ * Expose / Entry Point
+ */
+
+if (!module.parent) {
+  process.title = 'mdhtmljson';
+  main(process.argv.slice(), function(err, code) {
+    if (err) throw err;
+    return process.exit(code || 0);
   });
+} else {
+  module.exports = main;
 }
 
-if (argv.url) {
-	argv.output = argv.output || './mdhtml';
-	scrapeReadme(argv.url, argv.output);
-} else {
-	console.log('You must pass a url via the --url flag');
-}

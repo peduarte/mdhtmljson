@@ -22,7 +22,6 @@
     "url": "https://github.com/peduarte/mdhtmljson/issues"
   },
   "homepage": "https://github.com/peduarte/mdhtmljson/#readme",
-  "private": true,
   "devDependencies": {
     "yargs": "^3.19.0"
   },
