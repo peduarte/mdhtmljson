@@ -8,23 +8,6 @@ npm install mdhtmljson
 ```
 
 ## Usage
-```
-./node_modules/.bin/mdhtmljson --url=http://urlto.markdown.md
-```
->**Note**<br>
->By default, mhhtmljson will save the *output* in the root folder and name it *mdhtml.json*
-
-## Options
-### url
-*Required*<br>
-A string with the URL for a markdown file
-
-### output
-*Optional*<br>
-The output of the result<br>
-Default: `./mdhtml.json`
-
-## Examples
 ### Default
 ```
 ./node_modules/.bin/mdhtmljson --url=http://urlto.markdown.md
@@ -36,6 +19,19 @@ Will output `mdhtml.json` in your root folder
 ./node_modules/.bin/mdhtmljson --url=http://urlto.markdown.md --output=./data/readme.json
 ```
 Will output `readme.json` in `./data/`
+
+## Options
+### url
+*Required*<br>
+A string with the URL for a markdown file
+
+### output
+*Optional*<br>
+The output of the result<br>
+Default: `./mdhtml.json`
+
+## Demo
+You can see in action on [wallop site](https://github.com/peduarte/wallop-site) to take the Readme file from [wallop](https://github.com/peduarte/wallop) and use it as documentation on the site too. This way I only have one point of documentation 😁
 
 ## Licensing
 MIT © 2015 [Pedro Duarte](http://pedroduarte.me)
