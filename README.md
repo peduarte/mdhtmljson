@@ -12,7 +12,13 @@ npm install mdhtmljson
 ```
 ./node_modules/.bin/mdhtmljson --url=http://urlto.markdown.md
 ```
-Will output `mdhtml.json` in your root folder
+Will output `mdhtml.json` in your root folder:
+***mdhtml.json***
+```
+{
+  html: "<h1>Contents from the markdown</h1><p>...</p>"
+}
+```
 
 ### Default
 ```
