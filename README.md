@@ -1,6 +1,4 @@
-#mdhtmljson
-
-Convert a Markdown file to HTML into a JSON file
+**mdhtmljson** is a simple Node module that takes a URL to a *Markdown* file, converts it to *HTML* and outputs it into a *JSON* file.
 
 ### Installation
 ```
@@ -8,7 +6,6 @@ npm install mdhtmljson -g
 ```
 
 ### CLI
-#### Usage
 ```
 Usage: mdhtmljson <entry file> [options]
 
@@ -27,16 +24,15 @@ Example:
 ```
 mdhtmljson http://urlto.markdown.md -o /path/to/output.json
 ```
-The command above Will output the following in `/path/to/`:<br>
-`output.json`
+The command above will output the following in **/path/to/**:<br>
+**output.json**
 ```
 {
   html: "<h1>Contents from the markdown</h1><p>...</p>"
 }
 ```
 
-### Node
-#### Usage
+### NodeJS
 ```
 var mdhtmljson = require('mdhtmljson);
 
@@ -49,9 +45,12 @@ mdhtmljson(markdownUrl, jsonOutput);
 > **#protip**<br>
 > If not **option** is specified, it will output **mdhtml.hson** in your root directory.
 
-
 ## Demo
 You can see in action on [wallop site](https://github.com/peduarte/wallop-site) to take the Readme file from [wallop](https://github.com/peduarte/wallop) and use it as documentation on the site too. This way I only have one point of documentation 😁
+
+## Todo
+- Write tests
+- Ability to convert local Markdown file
 
 ## Licensing
 MIT © 2015 [Pedro Duarte](http://pedroduarte.me)
