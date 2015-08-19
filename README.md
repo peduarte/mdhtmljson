@@ -1,4 +1,4 @@
-**mdhtmljson** is a simple Node module that takes a URL to a *Markdown* file, converts it to *HTML* and outputs it into a *JSON* file.
+**mdhtmljson** is a simple Node module that takes a URL of a *Markdown* file, converts it to *HTML* and outputs it into a *JSON* file.
 
 ### Installation
 ```
