@@ -28,7 +28,7 @@ The command above will output the following in **/path/to/**:<br>
 **output.json**
 ```json
 {
-  html: "<h1>Contents from the markdown</h1><p>...</p>"
+  "html": "<h1>Contents from the markdown</h1><p>...</p>"
 }
 ```
 
