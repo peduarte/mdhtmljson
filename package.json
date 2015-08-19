@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/peduarte/mdhtmljson/#readme",
   "dependencies": {
-    "request": "^2.60.0",
+    "commander": "^2.8.1",
     "marked": "^0.3.5",
-    "yargs": "^3.19.0"
+    "request": "^2.60.0",
   }
 }
