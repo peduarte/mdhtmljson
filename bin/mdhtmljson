@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var mdhtmljson = require('../src');
+var mdhtmljson = require('../');
 var program = require('commander');
 
 program

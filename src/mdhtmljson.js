@@ -33,7 +33,8 @@ function init(url, output) {
 function parseMarkdown(url, output) {
   request(url, function (error, response, html) {
     if (error) {
-      return console.log(error + ' :(');
+      console.log(error + ' :(');
+      return false;
     }
 
     if (response.statusCode == 200) {
