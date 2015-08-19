@@ -2,39 +2,49 @@
 
 Convert a Markdown file to HTML into a JSON file
 
-## Installation
+### Installation
 ```
-npm install mdhtmljson
+npm install mdhtmljson -g
 ```
 
-## Usage
-### Default
+### CLI
+#### Usage
 ```
-./node_modules/.bin/mdhtmljson --url=http://urlto.markdown.md
+Usage: mdhtmljson <entry file> [options]
+
+Options:
+
+  -h, --help                  output usage information
+  -V, --version               output the version number
+  -o, --output <output file>  write output to this file – include path (.json file extension not needed)
+
+Example:
+
+  $ mdhtmljson https://github.com/peduarte/wallop/blob/master/README.md -o ./data/docs.json
 ```
-Will output the following in your root folder:<br>
-`mdhtml.json`
+
+#### Example
+```
+mdhtmljson http://urlto.markdown.md -o /path/to/output.json
+```
+The command above Will output the following in `/path/to/`:<br>
+`output.json`
 ```
 {
   html: "<h1>Contents from the markdown</h1><p>...</p>"
 }
 ```
 
-### Default
+### Node
 ```
-./node_modules/.bin/mdhtmljson --url=http://urlto.markdown.md --output=./data/readme.json
+var mdhtmljson = require('mdhtmljson);
+
+var markdownUrl = 'http://urlto.markdown.md';
+var jsonOutput = '/path/to/output.json'
+
+mdhtmljson(markdownUrl, jsonOutput);
 ```
-Will output `readme.json` in `./data/`
 
-## Options
-### url
-*Required*<br>
-A string with the URL for a markdown file
-
-### output
-*Optional*<br>
-The output of the result<br>
-Default: `./mdhtml.json`
 
 ## Demo
 You can see in action on [wallop site](https://github.com/peduarte/wallop-site) to take the Readme file from [wallop](https://github.com/peduarte/wallop) and use it as documentation on the site too. This way I only have one point of documentation 😁
