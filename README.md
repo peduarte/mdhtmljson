@@ -36,6 +36,7 @@ The command above Will output the following in `/path/to/`:<br>
 ```
 
 ### Node
+#### Usage
 ```
 var mdhtmljson = require('mdhtmljson);
 
@@ -44,6 +45,9 @@ var jsonOutput = '/path/to/output.json'
 
 mdhtmljson(markdownUrl, jsonOutput);
 ```
+
+> **#protip**<br>
+> If not **option** is specified, it will output **mdhtml.hson** in your root directory.
 
 
 ## Demo
