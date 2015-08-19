@@ -26,14 +26,14 @@ mdhtmljson http://urlto.markdown.md -o /path/to/output.json
 ```
 The command above will output the following in **/path/to/**:<br>
 **output.json**
-```
+```json
 {
   html: "<h1>Contents from the markdown</h1><p>...</p>"
 }
 ```
 
 ### NodeJS
-```
+```js
 var mdhtmljson = require('mdhtmljson);
 
 var markdownUrl = 'http://urlto.markdown.md';
