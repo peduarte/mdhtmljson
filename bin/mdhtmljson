@@ -11,6 +11,13 @@ program
   )
   .parse(process.argv);
 
+program.on('--help', function(){
+  console.log('  Example:');
+  console.log('');
+  console.log('    $ mdhtmljson https://github.com/peduarte/wallop/blob/master/README.md -o ./data/docs.json');
+  console.log('');
+});
+
 // If not paramters are passes
 // show help and bye bye
 if (program.args.length == 0) {

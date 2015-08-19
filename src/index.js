@@ -23,7 +23,6 @@ function init(url, output) {
    * @return {string}         default output including .json extension if not set
    */
   if (!output) {
-    console.log('no output -> ');
     output = './mdhtml.json';
     output = output.indexOf('.json') > -1 ? output : output + '.json';
   }
@@ -33,16 +32,23 @@ function init(url, output) {
 
 function parseMarkdown(url, output) {
   request(url, function (error, response, html) {
-    if (!error && response.statusCode == 200) {
+    if (error) {
+      return console.log(error + ' :(');
+    }
+
+    if (response.statusCode == 200) {
       var parsedResult = {
         html: marked(response.body)
       };
 
       fs.writeFile(output, JSON.stringify(parsedResult, null, 4), function(error){
-        if (error) { return console.log('Ooops, we have an error – Are you sure the output directory exists? ' + error); }
+        if (error) { return console.log('Ooops, are you sure the output directory exists? ' + error); }
         console.log('Your file is ready – ' + output);
       });
+    }
 
+    else {
+      console.log('Something went wrong, response status code ', response.statusCode);
     }
   });
 }
