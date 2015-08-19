@@ -37,7 +37,7 @@ The command above will output the following in **/path/to/**:<br>
 var mdhtmljson = require('mdhtmljson);
 
 var markdownUrl = 'http://urlto.markdown.md';
-var jsonOutput = '/path/to/output.json'
+var jsonOutput = '/path/to/output.json';
 
 mdhtmljson(markdownUrl, jsonOutput);
 ```
