@@ -17,10 +17,9 @@ var marked = require('marked');
 module.exports = init;
 
 function init(url, output) {
-  
   // if there is no output, set default path and filename
   if (!output) { output = './mdhtml.json'; }
-  
+
   // if it doesn't end with .json, add it
   output = output.match('\.json$') ? output : output + '.json';
 
