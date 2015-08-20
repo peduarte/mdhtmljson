@@ -17,15 +17,12 @@ var marked = require('marked');
 module.exports = init;
 
 function init(url, output) {
-  /**
-   * if there is no output, set default path and filename
-   * @param  {string} !output output of json
-   * @return {string}         default output including .json extension if not set
-   */
-  if (!output) {
-    output = './mdhtml.json';
-    output = output.indexOf('.json') > -1 ? output : output + '.json';
-  }
+  
+  // if there is no output, set default path and filename
+  if (!output) { output = './mdhtml.json'; }
+  
+  // if it doesn't end with .json, add it
+  output = output.match('\.json$') ? output : output + '.json';
 
   parseMarkdown(url, output);
 }
