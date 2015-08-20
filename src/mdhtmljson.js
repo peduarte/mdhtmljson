@@ -16,10 +16,6 @@ var marked = require('marked');
 
 module.exports = init;
 
-/**
- * @param  {string} !output output of json
- * @return {string}         default output including .json extension if not set
- */
 function init(url, output) {
   
   // if there is no output, set default path and filename
