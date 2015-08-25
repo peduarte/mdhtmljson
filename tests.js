@@ -3,7 +3,9 @@
 var mdhtmljson = require('./');
 var test = require('tape');
 
-test('I need to learn how to write tests', function(t) {
-  t.equal(1+1, 2, 'yay');
-  t.end();
+test('Check default output', function(assert) {
+  var lib = new mdhtmljson('https://raw.githubusercontent.com/defunctzombie/zuul/master/README.md');
+
+  assert.equal(lib.output, './mdhtml.json', 'Default output is "mdhtml.json"');
+  assert.end();
 });

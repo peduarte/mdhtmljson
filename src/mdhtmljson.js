@@ -14,19 +14,19 @@ var fs = require('fs');
 var request = require('request');
 var marked = require('marked');
 
-module.exports = init;
+module.exports = Mdhtmljson;
 
-function init(url, output) {
+function Mdhtmljson(url, output) {
   // if there is no output, set default path and filename
-  if (!output) { output = './mdhtml.json'; }
+  if (!output) { this.output = './mdhtml.json'; }
 
   // if it doesn't end with .json, add it
-  output = output.match('\.json$') ? output : output + '.json';
+  this.output = this.output.match('\.json$') ? this.output : this.output + '.json';
 
-  parseMarkdown(url, output);
+  this.parseMarkdown(url, this.output);
 }
 
-function parseMarkdown(url, output) {
+Mdhtmljson.prototype.parseMarkdown = function(url, output) {
   request(url, function (error, response, html) {
     if (error) {
       console.log(error + ' :(');
