@@ -48,10 +48,6 @@ mdhtmljson(markdownUrl, jsonOutput);
 ## Demo
 You can see in action on [wallop site](https://github.com/peduarte/wallop-site) to take the Readme file from [wallop](https://github.com/peduarte/wallop) and use it as documentation on the site too. This way I only have one point of documentation 😁
 
-## Todo
-- Write tests
-- Ability to convert local Markdown file
-
 ## Licensing
 MIT © 2015 [Pedro Duarte](http://pedroduarte.me)
 
