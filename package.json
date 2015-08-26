@@ -1,6 +1,6 @@
 {
   "name": "mdhtmljson",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Convert Markdown to HTML into a JSON file",
   "main": "index.js",
   "scripts": {
