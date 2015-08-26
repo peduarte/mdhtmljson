@@ -27,5 +27,5 @@ if (program.args.length == 0) {
 var mdUrl = program.args[0];
 var output = program.output || false;
 
-mdhtmljson(mdUrl, output);
+new mdhtmljson(mdUrl, output);
 
