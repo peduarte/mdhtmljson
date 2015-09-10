@@ -34,7 +34,7 @@ The command above will output the following in **/path/to/**:<br>
 
 ### NodeJS
 ```js
-var mdhtmljson = require('mdhtmljson);
+var mdhtmljson = require('mdhtmljson');
 
 var markdownUrl = 'http://urlto.markdown.md';
 var jsonOutput = '/path/to/output.json';
